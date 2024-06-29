@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px #a8a8a8, -10px -10px 20px #c4c3c3;
+}
+
+.calculator {
+  /* width: 30vw; */
+  margin: 0 auto;
+}
+
+.result {
+  background-color: #d1d1d1;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: inset 5px 5px 10px #bebebe, inset -5px -5px 10px #ffffff;
+}
+
+input {
+  width: 100%;
+  font-family: sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: #8da979;
+  padding: 3px;
+}
+
+#display {
+  text-align: left;
+  font-size: 1.9em;
+  min-height: 8vh;
+}
+
+#display::placeholder {
+  font-family: "DS-Digital", sans-serif;
+  font-size: 2.8rem;
+}
+
+#answer {
+  color: blue;
+  text-align: right;
+  min-height: 10vh;
+  font-size: 2.5rem;
+}
+
+.buttons {
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+#equals {
+  grid-column: span 1;
+}
+
+button {
+  padding: 15px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+}
+
+/* button:nth-child(1) {
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 2px 3px rgba(255, 0, 0, 0.4);
+} */
+
+.clear {
+  color: rgb(255, 0, 0);
+  text-shadow: 1px 2px 3px rgba(255, 0, 0, 0.4);
+}
+
+.delete {
+  color: rgb(0, 174, 255);
+  text-shadow: 1px 2px 3px rgba(0, 0, 255, 0.4);
+}
+
+.operator {
+  color: rgb(0, 64, 255);
+  text-shadow: 1px 2px 3px rgba(0, 0, 255, 0.4);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.number:active {
+  color: red;
+}
+
+.solar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1vw;
+}
+
+.solar h1 {
+  font-size: 2vw;
+  color: rgb(50, 49, 49);
+}
+
+.solar-panel {
+  height: 44px;
+  width: 120px;
+  background-color: #542a24;
+  border-radius: 4px;
+  box-shadow: inset 0 0 10px #000;
+  display: flex;
+}
+
+.solar-panel .vertical-line {
+  border-left: 3px solid #612f28;
+  height: 40px;
+  margin-left: 28.7px;
+  margin-top: 2px;
+  border-radius: 9px;
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    height: 85vh;
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  button {
+    font-size: 1.5rem;
+    cursor: none;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .solar {
+    margin-bottom: 4vw;
+  }
+
+  .solar h1 {
+    font-size: 6vw;
+    color: rgb(96, 95, 95);
+  }
+
+  .solar-panel {
+    height: 48px;
+  }
+
+  .solar-panel .vertical-line {
+    height: 46px;
+  }
+}

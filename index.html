@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="./Assets/calc-FavIcon.png"
+      type="image/x-icon"
+    />
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="blinker()">
+    <div class="container">
+      <div class="calculator">
+        <div class="solar">
+          <h1>.CALCY.</h1>
+          <div class="solar-panel">
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <!-- <div class="vertical-line"></div> -->
+          </div>
+        </div>
+
+        <div class="result">
+          <div class="cursor" id="cursor"></div>
+
+          <input
+            id="display"
+            type="text"
+            name="display"
+            placeholder="0"
+            readonly
+          />
+          <hr />
+          <input id="answer" type="text" readonly />
+        </div>
+        <div class="buttons">
+          <button class="clear">AC</button>
+          <button class="delete">DEL</button>
+          <button class="bracket">(</button>
+          <button class="bracket">)</button>
+
+          <button class="arrow">◁</button>
+          <button class="arrow">▷</button>
+
+          <!-- ◌ ▢ ◀ ▶ ◁ ▷ ◇ ○ -->
+          <button class="operator">√</button>
+          <button class="operator">^</button>
+          <button class="operator">%</button>
+
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+
+          <button class="operator">÷</button>
+
+          <button class="number">4</button>
+          <button class="number">5</button>
+          <button class="number">6</button>
+          <button class="operator">×</button>
+
+          <button class="number">1</button>
+          <button class="number">2</button>
+          <button class="number">3</button>
+          <button class="operator">−</button>
+
+          <button class="number">0</button>
+          <button class="number">.</button>
+          <button class="operator" id="equals">=</button>
+          <button class="operator">+</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
